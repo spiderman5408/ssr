@@ -107,13 +107,11 @@ CO='
 				All Rights Reserved	
 ==========================================================================';
 version=`lsb_release -a | grep -e Release|awk -F ":" '{ print $2 }'|awk -F "." '{ print $1 }'`
-if [ $version == "7" ];then
-#if [ $version == "6" ];then
+if [ $version == "6" ];then
 rpm -ivh ${webs}${MirrorHost}/${ServerLocation}/epel-release-6-8.noarch.rpm  >/dev/null 2>&1
 rpm -ivh ${webs}${MirrorHost}/${ServerLocation}/remi-release-6.rpm  >/dev/null 2>&1
 fi
-if [ $version == "999" ];then
-#if [ $version == "7" ];then
+if [ $version == "7" ];then
 echo 
     echo "安装被终止，请在Centos6系统上执行操作..."
 	echo "$CO";
